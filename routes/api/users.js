@@ -41,7 +41,7 @@ router.post("/register", (req, res) => {
           "X-Auth-Client": keys.bcclientId,
           "X-Auth-Token": keys.bcToken,
           "Cache-Control": "no-cache",
-          "Content-Type": "application/json;charset=utf-8",
+          "Content-Type": "application/json, text/plain, */*",
           Accept: "application/json, text/plain, */*"
         },
         body: {
@@ -169,8 +169,8 @@ router.post("/login/validate", (req, res) => {
           "X-Auth-Client": keys.bcclientId,
           "X-Auth-Token": keys.bcToken,
           "Cache-Control": "no-cache",
-          "Content-Type": "application/json",
-          Accept: "application/json"
+          "Content-Type": "application/json, text/plain, */*",
+          Accept: "application/json, text/plain, */*"
         },
         body: {
           password: req.body.password
